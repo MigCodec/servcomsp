@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -11,7 +12,7 @@ class AuthController extends Controller
         $validated = $request->validate(['email'=>'required','password'=> 'required']);
         if (Auth::attempt($validated)) {
             $request->session()->regenerate();
-            return redirect()->intended('home');
+            return redirect()->intended(route('home'));
         }
         return redirect()->back()->with('failed', 'Credenciales incorrectas');
     }

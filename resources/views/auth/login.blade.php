@@ -95,6 +95,11 @@
         <div>
             <button type="submit">Iniciar sesión</button>
         </div>
+        @if(session('failed'))
+        <div>
+            {{session('failed')}}
+        </div>
+        @endif
     </form>
 </div>
 
