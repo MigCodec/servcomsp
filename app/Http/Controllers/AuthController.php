@@ -8,7 +8,12 @@ class AuthController extends Controller
 {
     //
     public function login(Request $request){
-        return redirect()->back()->with('success', 'your message,here');
+        $validated = $request->validate(['email'=>'required','password'=> 'required']);
+        if (Auth::attempt($validated)) {
+            $request->session()->regenerate();
+            return redirect()->intended('home');
+        }
+        return redirect()->back()->with('failed', 'Credenciales incorrectas');
     }
     public function loginForm(){
         return view("auth.login");
