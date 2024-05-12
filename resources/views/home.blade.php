@@ -40,7 +40,8 @@
     </style>
 </head>
 <body>
-
+    @include('layouts.app')
+    <div class="content">
 <div class="user-info-container">
     <h2>Bienvenido</h2>
 
@@ -60,6 +61,7 @@
         <a href="{{ route('logout') }}">Cerrar sesión</a>
     </div>
 </div>
+    </div>
 
 </body>
 </html>

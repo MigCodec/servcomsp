@@ -16,6 +16,10 @@ class AuthController extends Controller
         }
         return redirect()->back()->with('failed', 'Credenciales incorrectas');
     }
+    public function logout(){
+        Auth::logout();
+        return view("auth.login");
+    }
     public function loginForm(){
         return view("auth.login");
     }
