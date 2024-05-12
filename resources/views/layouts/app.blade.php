@@ -1,5 +1,3 @@
-<!-- resources/views/layouts/app.blade.php -->
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -62,6 +60,7 @@
             z-index: 1001;
             top: 100%;
             left: 0;
+            width: 100%;
         }
 
         .nav-item:hover .submenu {
@@ -79,6 +78,8 @@
         .menu-toggle {
             display: none;
             cursor: pointer;
+            font-size: 1.5em;
+            margin-left: 5px;
         }
 
         @media only screen and (max-width: 768px) {
@@ -102,6 +103,21 @@
 
             .navbar.active .navbar-nav {
                 display: flex;
+            }
+
+            .nav-item {
+                position: static;
+            }
+
+            .submenu {
+                position: static;
+                display: none;
+                background-color: #333;
+                padding-left: 15px;
+            }
+
+            .navbar.active .submenu {
+                display: block;
             }
         }
     </style>
@@ -127,6 +143,7 @@
             <li class="nav-item"><a href="{{ route('logout') }}">Cerrar sesión</a></li>
         @else
             <li class="nav-item"><a href="{{ route('login') }}">Iniciar sesión</a></li>
+            <li class="nav-item"><a href="{{ route('register') }}">Registrarse</a></li>
         @endif
     </ul>
 </div>
