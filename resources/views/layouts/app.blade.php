@@ -142,14 +142,14 @@
         <li class="nav-item">
             <a href="#" class="menu-item">Mantenimientos</a>
             <ul class="submenu">
-                <li><a href="#">Agregar</a></li>
+                <li><a href="{{route("maintenance/add")}}">Agregar</a></li>
+                <li><a href="{{route("maintenance/get")}}">Obtener</a></li>
             </ul>
         </li>
         @if (Auth::check())
             <li class="nav-item"><a href="{{ route('logout') }}">Cerrar sesión</a></li>
         @else
             <li class="nav-item"><a href="{{ route('login') }}">Iniciar sesión</a></li>
-            <li class="nav-item"><a href="{{ route('register') }}">Registrarse</a></li>
         @endif
     </ul>
 </div>

@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Client;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -14,10 +15,13 @@ class CarFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition(): array
+    public function definition()
     {
         return [
-
+            //
+            'client_id'=> Client::all()->random()->id,
+            'patent' => $this->faker->name(),
+            'year' => $this->faker->realText(150),
         ];
     }
 }
