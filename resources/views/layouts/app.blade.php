@@ -7,7 +7,7 @@
     /* Estilos del navbar */
 .navbar {
     background-color: #333;
-    color: #fff;
+    color: #ffffff;
     padding: 10px;
     width: 100%;
     position: fixed;
@@ -22,7 +22,7 @@
 .navbar-brand {
     font-size: 1.5em;
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
     margin-right: 20px;
 }
 
@@ -41,7 +41,7 @@
 
 .nav-item a {
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
     display: block;
     padding: 10px 15px;
 }
@@ -74,7 +74,7 @@
 }
 
 .submenu a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     display: block;
     padding: 8px 0;
@@ -132,7 +132,7 @@
 
 <div class="navbar">
     <div class="navbar-brand">
-        <a href="{{ route('home') }}">Mi Aplicación</a>
+        Servcom SPA
     </div>
     <div class="menu-toggle">&#9776;</div>
     <ul class="navbar-nav">
