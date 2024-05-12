@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
+use App\Models\Car;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,6 +19,11 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Miguel Angel Araya Cortes',
             'email' => 'miguelangel.107@hotmail.com',
+        ]);
+        Car::factory()->create([
+            'patent' => 'BCDD97',
+            'year' => 2008,
+            'model'=>'V16',
         ]);
     }
 }
